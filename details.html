@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Deep chapter-by-chapter guide to The Almanack of Naval Ravikant with searchable themes and direct PDF jumps."
+    />
+    <title>Deep Details | Naval Almanack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="details.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-a" aria-hidden="true"></div>
+    <div class="ambient ambient-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Naval Almanack</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">
+        Menu
+      </button>
+      <nav id="mainNav" class="main-nav">
+        <a href="index.html#top">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#matrix">Deep Matrix</a>
+        <a href="index.html#viewer">PDF Viewer</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section id="overview" class="hero reveal">
+        <p class="kicker">Book-Ordered Chapter Matrix</p>
+        <h1>Deep breakdown across <span>wealth, judgment, happiness, and self-authorship</span>.</h1>
+        <p class="lede">
+          Search by topic, filter by track, and jump straight into the source PDF when you want the
+          original chapter context.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#matrix">Explore Deep Matrix</a>
+          <a class="btn btn-ghost" href="index.html#viewer">Open Embedded PDF Viewer</a>
+        </div>
+      </section>
+
+      <section id="matrix" class="section">
+        <div class="section-head reveal">
+          <p class="eyebrow">Searchable Topics</p>
+          <h2>Major chapters distilled into practical notes</h2>
+          <p class="section-note">
+            Each card includes the chapter start page plus a compact interpretation of the idea, the
+            compounding upside, what to do with it, and the failure mode to avoid.
+          </p>
+        </div>
+
+        <div class="control-bar reveal">
+          <label for="detailSearch">Search</label>
+          <input
+            id="detailSearch"
+            type="search"
+            placeholder="Search chapter or theme (e.g. leverage, happiness, accountability)"
+          />
+
+          <label for="focusArea">Track</label>
+          <select id="focusArea" aria-label="Track">
+            <option value="all">All tracks</option>
+            <option value="wealth">Wealth</option>
+            <option value="judgment">Judgment</option>
+            <option value="happiness">Happiness</option>
+            <option value="self">Self</option>
+            <option value="philosophy">Philosophy</option>
+          </select>
+
+          <label for="sortOrder">Order</label>
+          <select id="sortOrder" aria-label="Sort order">
+            <option value="asc">Book order</option>
+            <option value="desc">Reverse order</option>
+          </select>
+        </div>
+
+        <div id="yearPills" class="year-pills reveal"></div>
+        <div id="detailGrid" class="detail-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <p>Use the chapter matrix to move fast, then jump back to the source text when you want depth.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="details.js"></script>
+  </body>
+</html>
